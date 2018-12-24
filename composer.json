@@ -12,7 +12,9 @@
     ],
     "require": {
         "yiisoft/yii2": "*",
-        "yiismart/yii2-base": "*"
+        "yiismart/yii2-base": "*",
+        "creocoder/yii2-nested-sets": "0.9.*",
+        "dkhlystov/yii2-treegrid": "*"
     },
     "autoload": {
         "psr-4": {
