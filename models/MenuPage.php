@@ -6,7 +6,6 @@ use smart\page\models\Page;
 
 class MenuPage extends Menu
 {
-
     const OBJECT_CLASS = 'smart\page\models\Page';
 
     /**
@@ -56,5 +55,4 @@ class MenuPage extends Menu
     {
         return ['/page/page/index', 'alias' => $this->alias];
     }
-
 }

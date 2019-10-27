@@ -12,7 +12,6 @@ use smart\menu\models\Menu;
 
 class ItemController extends BackendController
 {
-
     /**
      * Create
      * @param integer $id 
@@ -115,5 +114,4 @@ class ItemController extends BackendController
             'items' => Menu::getAliasListByType($type),
         ]);
     }
-
 }

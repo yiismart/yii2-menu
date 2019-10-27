@@ -4,7 +4,6 @@ namespace smart\menu\models;
 
 class MenuDivider extends Menu
 {
-
     /**
      * @inheritdoc
      */
@@ -30,5 +29,4 @@ class MenuDivider extends Menu
     {
         return false;
     }
-
 }

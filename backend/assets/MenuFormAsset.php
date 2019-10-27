@@ -6,7 +6,6 @@ use yii\web\AssetBundle;
 
 class MenuFormAsset extends AssetBundle
 {
-
     public $js = [
         'menu-form.js',
     ];
@@ -21,5 +20,4 @@ class MenuFormAsset extends AssetBundle
 
         $this->sourcePath = __DIR__ . '/menu-form';
     }
-
 }

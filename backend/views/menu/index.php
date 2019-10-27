@@ -70,13 +70,10 @@ $this->params['breadcrumbs'] = [
             'buttons' => [
                 'create' => function ($url, $model, $key) {
                     $isSection = $model->type == Menu::SECTION;
-
                     if (!($model->isRoot() || $isSection)) {
                         return '';
                     }
-
                     $title = Yii::t('menu', 'Create item');
-
                     return Html::a('<span class="fas fa-plus"></span>', $url, [
                         'title' => $title,
                         'aria-label' => $title,
@@ -88,7 +85,6 @@ $this->params['breadcrumbs'] = [
                 if ($action == 'create' || !$model->isRoot()) {
                     $action = 'item/' . $action;
                 }
-
                 return [$action, 'id' => $model->id];
             },
         ],

@@ -7,7 +7,6 @@ use smart\base\Form;
 
 class MenuForm extends Form
 {
-
     /**
      * @var boolean
      */
@@ -51,47 +50,11 @@ class MenuForm extends Form
     /**
      * @inheritdoc
      */
-    public function assignFrom($object)
+    public function map()
     {
-        $this->active = $object->active == 0 ? '0' : '1';
-        $this->name = $object->name;
-        $this->alias = $object->alias;
+        return [
+            ['active', 'boolean'],
+            [['name', 'alias'], 'string'],
+        ];
     }
-
-    /**
-     * @inheritdoc
-     */
-    public function assignTo($object)
-    {
-        $object->active = $this->active == 1;
-        $object->name = $this->name;
-        $object->alias = $this->alias;
-    }
-
-    /**
-     * Save object using model attributes
-     * @return boolean
-     */
-    public function save()
-    {
-        if (!$this->validate())
-            return false;
-
-        $object = $this->_object;
-
-        $object->active = $this->active == 1;
-        $object->name = $this->name;
-        $object->alias = $this->alias;
-
-        if ($object->getIsNewRecord()) {
-            if (!$object->makeRoot(false))
-                return false;
-        } else {
-            if (!$object->save(false))
-                return false;
-        }
-
-        return true;
-    }
-
 }

@@ -11,7 +11,6 @@ use creocoder\nestedsets\NestedSetsQueryBehavior;
 
 class Menu extends ActiveRecord
 {
-
     const SECTION = 0;
     const DIVIDER = 1;
     const LINK = 2;
@@ -255,12 +254,10 @@ class Menu extends ActiveRecord
     {
         return new MenuQuery(get_called_class());
     }
-
 }
 
 class MenuQuery extends ActiveQuery
 {
-
     /**
      * @inheritdoc
      */
@@ -270,5 +267,4 @@ class MenuQuery extends ActiveQuery
             NestedSetsQueryBehavior::className(),
         ];
     }
-
 }

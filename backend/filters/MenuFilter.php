@@ -9,7 +9,6 @@ use smart\menu\models\Menu;
 
 class MenuFilter extends Menu implements FilterInterface
 {
-
     /**
      * @inheritdoc
      */
@@ -30,5 +29,4 @@ class MenuFilter extends Menu implements FilterInterface
         $config['query'] = $query;
         return new ActiveDataProvider($config);
     }
-
 }

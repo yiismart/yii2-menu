@@ -4,7 +4,6 @@ namespace smart\menu\models;
 
 class MenuLink extends Menu
 {
-
     /**
      * @inheritdoc
      */
@@ -38,5 +37,4 @@ class MenuLink extends Menu
     {
         return $this->url;
     }
-
 }

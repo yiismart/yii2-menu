@@ -11,7 +11,6 @@ use smart\menu\models\Menu;
 
 class MenuController extends BackendController
 {
-
     /**
      * Tree
      * @param integer|null $id initial item id
@@ -139,5 +138,4 @@ class MenuController extends BackendController
                 break;
         }
     }
-
 }

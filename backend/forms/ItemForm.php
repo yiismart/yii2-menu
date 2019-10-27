@@ -8,7 +8,6 @@ use smart\menu\models\Menu;
 
 class ItemForm extends Form
 {
-
     /**
      * @var boolean
      */
@@ -94,28 +93,23 @@ class ItemForm extends Form
     /**
      * @inheritdoc
      */
-    public function assignFrom($object)
+    public function map()
     {
-        $this->active = $object->active == 0 ? '0' : '1';
-        $this->name = $object->name;
-        $this->type = $object->type;
-        $this->url = $object->url;
-        $this->alias = $object->alias;
-
-        $this->_typeDisabled = $object->children()->count() > 0;
-        $this->_aliasList = $object->getAliasList();
+        return [
+            ['active', 'boolean'],
+            [['name', 'url', 'alias'], 'string'],
+            ['type', 'integer'],
+        ];
     }
 
     /**
      * @inheritdoc
      */
-    public function assignTo($object)
+    public function assignFrom($object, $attributeNames = null)
     {
-        $object->active = $this->active == 1;
-        $object->name = $this->name;
-        $object->type = $this->type;
-        $object->url = $this->url;
-        $object->alias = $this->alias;
-    }
+        parent::assignFrom($object, $attributeNames);
 
+        $this->_typeDisabled = $object->children()->count() > 0;
+        $this->_aliasList = $object->getAliasList();
+    }
 }

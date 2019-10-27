@@ -4,7 +4,6 @@ namespace smart\menu\models;
 
 class MenuSection extends Menu
 {
-
     /**
      * @inheritdoc
      */
@@ -22,5 +21,4 @@ class MenuSection extends Menu
     {
         return true;
     }
-
 }

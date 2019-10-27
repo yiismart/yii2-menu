@@ -7,7 +7,7 @@ create table if not exists `menu`
     `depth` int(10) not null,
     `name` varchar(100) default null,
     `active` tinyint(1) default 1,
-    `type` int(10) not null,
+    `type` int(10) default null,
     `url` varchar(200) default null,
     `alias` varchar(200) default null,
     primary key (`id`),

@@ -8,7 +8,6 @@ use smart\base\BackendModule;
 
 class Module extends BackendModule
 {
-
     /**
      * @inheritdoc
      */
@@ -36,5 +35,4 @@ class Module extends BackendModule
             'url' => ['/menu/menu/index'],
         ];
     }
-
 }
